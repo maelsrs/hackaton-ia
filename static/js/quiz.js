@@ -297,53 +297,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    async function resetQuiz() {
-        try {
-            // Récupérer de nouvelles questions depuis l'API
-            const response = await fetch('/api/new-questions');
-            if (!response.ok) {
-                throw new Error('Erreur lors de la récupération des questions');
-            }
-            questions = await response.json();
-
-            // Réinitialiser les variables
-            currentQuestionIndex = 0;
-            userAnswers = {};
-            let score = 0;
-            
-            // Masquer les résultats et le résumé
-            document.querySelector('.results').style.display = 'none';
-            const summaryContainer = document.querySelector('.answers-summary');
-            if (summaryContainer) {
-                summaryContainer.style.display = 'none';
-            }
-
-            // Réinitialiser l'affichage des questions
-            resetQuestions();
-            showQuestion(0);
-            
-            // Afficher la première question
-            document.querySelector('.quiz-container').style.display = 'block';
-            updateProgress();
-        } catch (error) {
-            console.error('Erreur:', error);
-            alert('Une erreur est survenue lors du rechargement du quiz');
-        }
-    }
-
-    // Gestion du bouton flottant du quiz
-    const quizButton = document.querySelector('.floating-quiz-button');
-    if (quizButton) {
-        window.addEventListener('scroll', function() {
-            const bottomThreshold = document.documentElement.scrollHeight - window.innerHeight - 100;
-            
-            if (window.scrollY > bottomThreshold) {
-                quizButton.classList.add('enlarged');
-            } else {
-                quizButton.classList.remove('enlarged');
-            }
-        });
-    }
 });
  

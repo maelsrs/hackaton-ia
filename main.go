@@ -112,20 +112,6 @@ func main() {
 		json.NewEncoder(w).Encode(result)
 	})
 
-	// Nouvel endpoint pour obtenir de nouvelles questions
-	http.HandleFunc("/api/new-questions", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "Méthode non autorisée", http.StatusMethodNotAllowed)
-			return
-		}
-
-		// Sélectionner de nouvelles questions aléatoires
-		newQuestions := selectRandomQuestions(allQuestions, QUIZ_SIZE)
-
-		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(newQuestions)
-	})
-
 	// Démarrer le serveur
 	port := os.Getenv("PORT")
 	if port == "" {
