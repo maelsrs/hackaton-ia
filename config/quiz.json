@@ -1,52 +1,102 @@
 [
   {
-    "question": "Dans quelle poubelle doit-on jeter les bouteilles en plastique ?",
-    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
-    "answer": "Poubelle Jaune"
+    "question": "Quel type de déchets doit-on mettre dans la poubelle jaune ?",
+    "options": ["Emballages plastiques et cartons", "Bouteilles en verre", "Déchets alimentaires"],
+    "answer": "Emballages plastiques et cartons"
   },
   {
-    "question": "Où doit-on jeter les restes de nourriture ?",
-    "options": ["Compost", "Poubelle Jaune", "Poubelle Verte"],
-    "answer": "Compost"
+    "question": "Où doit-on jeter les bouteilles en verre ?",
+    "options": ["Poubelle verte", "Poubelle jaune", "Poubelle grise"],
+    "answer": "Poubelle verte"
   },
   {
-    "question": "Les journaux doivent être jetés dans quelle poubelle ?",
-    "options": ["Poubelle Bleue", "Poubelle Jaune", "Poubelle Verte"],
-    "answer": "Poubelle Jaune"
+    "question": "Les épluchures de légumes doivent être jetées dans :",
+    "options": ["Le compost", "La poubelle jaune", "La poubelle grise"],
+    "answer": "Le compost"
   },
   {
-    "question": "Où doit-on jeter les canettes en aluminium ?",
-    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
-    "answer": "Poubelle Jaune"
+    "question": "Combien d'arbres sont préservés pour chaque tonne de papier recyclé ?",
+    "options": ["17 arbres", "5 arbres", "30 arbres"],
+    "answer": "17 arbres"
   },
   {
-    "question": "Les ampoules usagées doivent être jetées où ?",
-    "options": ["Déchetterie", "Poubelle Jaune", "Poubelle Verte"],
-    "answer": "Déchetterie"
+    "question": "Quel pourcentage d'énergie est économisé en recyclant l'aluminium ?",
+    "options": ["95%", "50%", "75%"],
+    "answer": "95%"
   },
   {
-    "question": "Où doit-on jeter les cartons d'emballage ?",
-    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
-    "answer": "Poubelle Jaune"
+    "question": "Combien d'années sont nécessaires pour qu'une bouteille en plastique se décompose ?",
+    "options": ["450 ans", "100 ans", "50 ans"],
+    "answer": "450 ans"
   },
   {
-    "question": "Les piles usagées doivent être déposées où ?",
-    "options": ["Déchetterie", "Poubelle Jaune", "Poubelle Verte"],
-    "answer": "Déchetterie"
+    "question": "Parmi ces déchets, lequel doit être déposé en déchetterie ?",
+    "options": ["Les piles usagées", "Les journaux", "Les boîtes de conserve"],
+    "answer": "Les piles usagées"
   },
   {
-    "question": "Où doit-on jeter les vêtements usagés ?",
-    "options": ["Conteneur à vêtements", "Poubelle Jaune", "Poubelle Verte"],
-    "answer": "Conteneur à vêtements"
+    "question": "Quelle est l'une des meilleures façons de réduire les emballages selon le site ?",
+    "options": ["Acheter en vrac", "Utiliser des sacs en plastique biodégradables", "Préférer les produits surgelés"],
+    "answer": "Acheter en vrac"
   },
   {
-    "question": "Les bouteilles en verre doivent être jetées dans quelle poubelle ?",
-    "options": ["Poubelle Verte", "Poubelle Jaune", "Poubelle Grise"],
-    "answer": "Poubelle Verte"
+    "question": "Les mouchoirs usagés doivent être jetés dans quelle poubelle ?",
+    "options": ["Poubelle grise", "Poubelle jaune", "Compost"],
+    "answer": "Poubelle grise"
   },
   {
-    "question": "Où doit-on jeter les sacs en plastique ?",
-    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
-    "answer": "Poubelle Jaune"
+    "question": "Quelle action n'est PAS recommandée pour réduire ses déchets ?",
+    "options": ["Utiliser des pailles en plastique jetables", "Composter les déchets organiques", "Réparer au lieu de jeter"],
+    "answer": "Utiliser des pailles en plastique jetables"
+  },
+  {
+    "question": "Quelle quantité de déchets un Français produit-il en moyenne par an ?",
+    "options": ["590 kg", "390 kg", "290 kg"],
+    "answer": "390 kg"
+  },
+  {
+    "question": "Comment appelle-t-on les déchets qui deviennent des matières premières ?",
+    "options": ["Les ressources secondaires", "Les déchets ultimes", "Les résidus"],
+    "answer": "Les ressources secondaires"
+  },
+  {
+    "question": "Quel pourcentage des emballages sont recyclés en France ?",
+    "options": ["70%", "45%", "85%"],
+    "answer": "70%"
+  },
+  {
+    "question": "Les bouchons en plastique des bouteilles doivent être :",
+    "options": ["Vissés sur la bouteille", "Jetés séparément", "Mis dans une autre poubelle"],
+    "answer": "Vissés sur la bouteille"
+  },
+  {
+    "question": "Quelle est la première étape du tri sélectif ?",
+    "options": ["Bien vider les emballages", "Compacter les déchets", "Séparer par couleur"],
+    "answer": "Bien vider les emballages"
+  },
+  {
+    "question": "Quel déchet met le plus de temps à se décomposer dans la nature ?",
+    "options": ["Le chewing-gum", "Le mégot de cigarette", "La canette en aluminium"],
+    "answer": "Le chewing-gum"
+  },
+  {
+    "question": "Les cartons souillés par de la nourriture sont :",
+    "options": ["À jeter dans la poubelle grise", "À mettre au compost", "À mettre dans la poubelle jaune"],
+    "answer": "À jeter dans la poubelle grise"
+  },
+  {
+    "question": "Quelle proportion d'un smartphone peut être recyclée ?",
+    "options": ["80%", "50%", "30%"],
+    "answer": "80%"
+  },
+  {
+    "question": "Où jeter un miroir cassé ?",
+    "options": ["À la déchetterie", "Dans le conteneur à verre", "Dans la poubelle grise"],
+    "answer": "À la déchetterie"
+  },
+  {
+    "question": "Le papier d'aluminium usagé se recycle :",
+    "options": ["Dans la poubelle jaune s'il est propre et en boule", "Jamais", "Dans le conteneur à verre"],
+    "answer": "Dans la poubelle jaune s'il est propre et en boule"
   }
 ] 
