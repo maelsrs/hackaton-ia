@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="eco-title">Éco<span class="highlight">Tri</span></h1>
+                <p class="hero-subtitle">Ensemble pour un avenir plus vert</p>
+                <div class="leaf-animation">
+                    <svg class="leaf" viewBox="0 0 100 100">
+                        <path d="M50,0 C50,50 0,50 0,50 C0,50 50,50 50,100 C50,50 100,50 100,50 C100,50 50,50 50,0 Z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="scroll-text">Découvrir</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro section">
+            <div class="container">
+                <h2 class="section-title">Notre Planète a Besoin de Vous</h2>
+                <div class="two-columns">
+                    <div class="column">
+                        <p>
+                            Chaque jour, nous générons des tonnes de déchets qui finissent dans des décharges, polluent nos océans et détruisent nos écosystèmes. Le tri sélectif est l'une des actions les plus simples et efficaces que nous pouvons entreprendre pour réduire notre impact environnemental.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="stat-card">
+                            <div class="stat-value" data-value="300">0</div>
+                            <div class="stat-label">millions de tonnes de déchets produits chaque année</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits section dark">
+            <div class="container">
+                <h2 class="section-title">Pourquoi Trier ses Déchets ?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,2L1,21H23L12,2M12,6L19.5,19H4.5L12,6Z"/>
+                            </svg>
+                        </div>
+                        <h3>Économiser les Ressources</h3>
+                        <p>Recycler permet d'économiser des matières premières et de l'énergie pour la production de nouveaux produits.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7L16.9,12H15V18H9V12H7.1L12,7.7Z"/>
+                            </svg>
+                        </div>
+                        <h3>Réduire la Pollution</h3>
+                        <p>Moins de déchets dans les décharges signifie moins de pollution des sols, de l'eau et de l'air.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                            </svg>
+                        </div>
+                        <h3>Créer des Emplois</h3>
+                        <p>L'industrie du recyclage crée des emplois locaux et contribue à l'économie circulaire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section how-to">
+            <div class="container">
+                <h2 class="section-title">Comment Bien Trier ?</h2>
+                <div class="recycling-bins">
+                    <div class="bin-card yellow">
+                        <div class="bin-icon"></div>
+                        <h3>Poubelle Jaune</h3>
+                        <ul>
+                            <li>Emballages plastiques</li>
+                            <li>Cartons</li>
+                            <li>Papiers</li>
+                            <li>Conserves métalliques</li>
+                        </ul>
+                    </div>
+                    <div class="bin-card green">
+                        <div class="bin-icon"></div>
+                        <h3>Poubelle Verte</h3>
+                        <ul>
+                            <li>Bouteilles en verre</li>
+                            <li>Bocaux en verre</li>
+                            <li>Pots en verre</li>
+                        </ul>
+                    </div>
+                    <div class="bin-card brown">
+                        <div class="bin-icon"></div>
+                        <h3>Compost</h3>
+                        <ul>
+                            <li>Déchets alimentaires</li>
+                            <li>Épluchures</li>
+                            <li>Coquilles d'œufs</li>
+                            <li>Marc de café</li>
+                        </ul>
+                    </div>
+                    <div class="bin-card gray">
+                        <div class="bin-icon"></div>
+                        <h3>Poubelle Grise</h3>
+                        <ul>
+                            <li>Déchets non recyclables</li>
+                            <li>Couches</li>
+                            <li>Mouchoirs usagés</li>
+                            <li>Vaisselle cassée</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section impact parallax">
+            <div class="container">
+                <h2 class="section-title">L'Impact de Vos Actions</h2>
+                <div class="impact-facts">
+                    <div class="impact-card">
+                        <div class="impact-number" data-value="17">0</div>
+                        <p>arbres préservés pour chaque tonne de papier recyclé</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-value="95">0</div>
+                        <p>pourcentage d'énergie économisée en recyclant l'aluminium</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-value="450">0</div>
+                        <p>années nécessaires à une bouteille plastique pour se décomposer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section tips">
+            <div class="container">
+                <h2 class="section-title">Astuces pour Réduire vos Déchets</h2>
+                <div class="tips-container">
+                    <div class="tip">
+                        <span class="tip-number">01</span>
+                        <h3>Refusez le plastique à usage unique</h3>
+                        <p>Utilisez des sacs réutilisables, des bouteilles d'eau réutilisables et évitez les pailles en plastique.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">02</span>
+                        <h3>Compostez vos déchets organiques</h3>
+                        <p>Transformez vos déchets alimentaires en compost riche pour votre jardin ou vos plantes.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">03</span>
+                        <h3>Achetez en vrac</h3>
+                        <p>Réduisez les emballages en achetant des produits en vrac avec vos propres contenants.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">04</span>
+                        <h3>Réparez au lieu de jeter</h3>
+                        <p>Donnez une seconde vie à vos objets en les réparant plutôt qu'en les remplaçant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section quiz-intro dark">
+            <div class="container">
+                <h2 class="section-title">Testez vos Connaissances</h2>
+                <p>Pensez-vous être un expert du tri sélectif ? Mettez vos connaissances à l'épreuve avec notre quiz interactif.</p>
+                <div class="cta-container">
+                    <a href="/quiz" class="cta-button">Commencer le Quiz</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2 class="eco-title">Éco<span class="highlight">Tri</span></h2>
+                </div>
+                <div class="footer-text">
+                    <p>© 2023 ÉcoTri - Tous droits réservés</p>
+                    <p>Créé avec passion pour l'environnement</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html> 

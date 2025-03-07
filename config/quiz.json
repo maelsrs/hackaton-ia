@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Dans quelle poubelle doit-on jeter les bouteilles en plastique ?",
+    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
+    "answer": "Poubelle Jaune"
+  },
+  {
+    "question": "Où doit-on jeter les restes de nourriture ?",
+    "options": ["Compost", "Poubelle Jaune", "Poubelle Verte"],
+    "answer": "Compost"
+  },
+  {
+    "question": "Les journaux doivent être jetés dans quelle poubelle ?",
+    "options": ["Poubelle Bleue", "Poubelle Jaune", "Poubelle Verte"],
+    "answer": "Poubelle Jaune"
+  },
+  {
+    "question": "Où doit-on jeter les canettes en aluminium ?",
+    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
+    "answer": "Poubelle Jaune"
+  },
+  {
+    "question": "Les ampoules usagées doivent être jetées où ?",
+    "options": ["Déchetterie", "Poubelle Jaune", "Poubelle Verte"],
+    "answer": "Déchetterie"
+  },
+  {
+    "question": "Où doit-on jeter les cartons d'emballage ?",
+    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
+    "answer": "Poubelle Jaune"
+  },
+  {
+    "question": "Les piles usagées doivent être déposées où ?",
+    "options": ["Déchetterie", "Poubelle Jaune", "Poubelle Verte"],
+    "answer": "Déchetterie"
+  },
+  {
+    "question": "Où doit-on jeter les vêtements usagés ?",
+    "options": ["Conteneur à vêtements", "Poubelle Jaune", "Poubelle Verte"],
+    "answer": "Conteneur à vêtements"
+  },
+  {
+    "question": "Les bouteilles en verre doivent être jetées dans quelle poubelle ?",
+    "options": ["Poubelle Verte", "Poubelle Jaune", "Poubelle Grise"],
+    "answer": "Poubelle Verte"
+  },
+  {
+    "question": "Où doit-on jeter les sacs en plastique ?",
+    "options": ["Poubelle Jaune", "Poubelle Verte", "Poubelle Grise"],
+    "answer": "Poubelle Jaune"
+  }
+] 

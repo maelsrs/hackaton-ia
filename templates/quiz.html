@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+</head>
+<body class="quiz-page">
+    <div class="noise-overlay"></div>
+    
+    <header class="quiz-header">
+        <div class="container">
+            <a href="/" class="back-link">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+                </svg>
+                Retour
+            </a>
+            <h1 class="eco-title">Quiz <span class="highlight">ÉcoTri</span></h1>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        <div class="quiz-intro active" id="quiz-intro">
+            <div class="container">
+                <h2>Testez vos connaissances sur le tri sélectif</h2>
+                <p>Ce quiz comporte {{ len .Questions }} questions. Chaque bonne réponse vous rapporte 1 point. Êtes-vous prêt à relever le défi ?</p>
+                <button class="cta-button" id="start-quiz">Commencer le Quiz</button>
+            </div>
+        </div>
+
+        <div class="quiz-content" id="quiz-content">
+            <div class="container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">Question 1/{{ len .Questions }}</div>
+                </div>
+
+                <div class="questions-container">
+                    {{ range $index, $question := .Questions }}
+                    <div class="question" id="question-{{ $index }}" data-question-id="{{ $index }}">
+                        <h3>{{ $question.Question }}</h3>
+                        <div class="options">
+                            {{ range $option := $question.Options }}
+                            <div class="option">
+                                <input type="radio" id="q{{ $index }}-{{ $option }}" name="q{{ $index }}" value="{{ $option }}">
+                                <label for="q{{ $index }}-{{ $option }}">{{ $option }}</label>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+
+                <div class="quiz-navigation">
+                    <button id="prev-btn" class="nav-btn" disabled>Précédent</button>
+                    <button id="next-btn" class="nav-btn">Suivant</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results" id="quiz-results">
+            <div class="container">
+                <h2>Résultats du Quiz</h2>
+                <div class="result-card">
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle"
+                                id="score-circle"
+                                stroke-dasharray="0, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="score-text" id="score-text">0%</text>
+                        </svg>
+                    </div>
+                    <div class="score-details">
+                        <p>Vous avez obtenu <span id="score-value">0</span> bonnes réponses sur {{ len .Questions }}.</p>
+                        <p id="score-message"></p>
+                    </div>
+                </div>
+                <button id="restart-btn" class="cta-button">Réessayer</button>
+                <a href="/" class="secondary-button">Retour à l'accueil</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2 class="eco-title">Éco<span class="highlight">Tri</span></h2>
+                </div>
+                <div class="footer-text">
+                    <p>© 2023 ÉcoTri - Tous droits réservés</p>
+                    <p>Créé avec passion pour l'environnement</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Utiliser les données JSON préparées par le serveur
+        const quizData = {
+            questions: {{ .QuestionsJSON }}
+        };
+    </script>
+    <script src="/static/js/quiz.js"></script>
+</body>
+</html> 
