@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSort - Learn Selective Sorting</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-['Poppins']">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/static/images/pattern.png')] opacity-10 animate-shimmer"></div>
+        <div class="container mx-auto px-4 text-center z-10">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 hero-title">
+                <span class="text-green-400 animate-glow">Eco</span>Sort
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto hero-subtitle">
+                Transform your waste management habits and become an environmental hero
+            </p>
+            <div class="flex justify-center space-x-4 hero-buttons">
+                <a href="#learn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 animate-pulse">
+                    Learn More
+                </a>
+                <a href="#quiz" class="bg-transparent border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 animate-pulse">
+                    Take the Quiz
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent"></div>
+    </section>
+
+    <!-- Why Sort Section -->
+    <section id="learn" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 animate-fade-in">Why Selective Sorting Matters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 animate-fade-in">
+                    <div class="text-green-400 text-4xl mb-4 icon-float">🌍</div>
+                    <h3 class="text-xl font-bold mb-4">Protect Our Planet</h3>
+                    <p class="text-gray-300">Every piece of properly sorted waste helps reduce pollution and conserve natural resources for future generations.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 animate-fade-in" style="animation-delay: 0.2s">
+                    <div class="text-green-400 text-4xl mb-4 icon-float">♻️</div>
+                    <h3 class="text-xl font-bold mb-4">Enable Recycling</h3>
+                    <p class="text-gray-300">Proper sorting ensures materials can be effectively recycled, reducing the need for new raw materials.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 animate-fade-in" style="animation-delay: 0.4s">
+                    <div class="text-green-400 text-4xl mb-4 icon-float">🌱</div>
+                    <h3 class="text-xl font-bold mb-4">Create Compost</h3>
+                    <p class="text-gray-300">Organic waste can be transformed into nutrient-rich compost, supporting sustainable agriculture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Sort Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 animate-fade-in">How to Sort Your Waste</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="bg-gray-900 p-6 rounded-xl transform hover:scale-105 transition-all duration-300 animate-fade-in">
+                        <h3 class="text-xl font-bold text-green-400 mb-4">Green Bin - Organic Waste</h3>
+                        <ul class="text-gray-300 space-y-2">
+                            <li class="list-item">• Food scraps and peels</li>
+                            <li class="list-item">• Coffee grounds and filters</li>
+                            <li class="list-item">• Garden waste</li>
+                            <li class="list-item">• Paper towels and tissues</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl transform hover:scale-105 transition-all duration-300 animate-fade-in" style="animation-delay: 0.2s">
+                        <h3 class="text-xl font-bold text-green-400 mb-4">Blue Bin - Recycling</h3>
+                        <ul class="text-gray-300 space-y-2">
+                            <li class="list-item">• Clean paper and cardboard</li>
+                            <li class="list-item">• Plastic containers</li>
+                            <li class="list-item">• Metal cans</li>
+                            <li class="list-item">• Glass bottles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div class="bg-gray-900 p-6 rounded-xl transform hover:scale-105 transition-all duration-300 animate-fade-in" style="animation-delay: 0.4s">
+                        <h3 class="text-xl font-bold text-green-400 mb-4">Yellow Bin - Mixed Recycling</h3>
+                        <ul class="text-gray-300 space-y-2">
+                            <li class="list-item">• Plastic packaging</li>
+                            <li class="list-item">• Aluminum foil</li>
+                            <li class="list-item">• Cartons</li>
+                            <li class="list-item">• Clean plastic bags</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl transform hover:scale-105 transition-all duration-300 animate-fade-in" style="animation-delay: 0.6s">
+                        <h3 class="text-xl font-bold text-green-400 mb-4">Red Bin - Non-Recyclable</h3>
+                        <ul class="text-gray-300 space-y-2">
+                            <li class="list-item">• Dirty paper</li>
+                            <li class="list-item">• Plastic wrap</li>
+                            <li class="list-item">• Styrofoam</li>
+                            <li class="list-item">• Broken glass</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 animate-fade-in">Test Your Knowledge</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+                Ready to become a recycling expert? Take our interactive quiz to test your knowledge about selective sorting!
+            </p>
+            <a href="/quiz" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20 text-lg animate-fade-in" style="animation-delay: 0.4s">
+                Start the Quiz
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 EcoSort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add animation to sections as they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

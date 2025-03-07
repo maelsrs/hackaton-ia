@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results - EcoSort</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-['Poppins'] min-h-screen">
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12 animate-fade-in">
+                <h1 class="text-4xl font-bold mb-4">Your Quiz Results</h1>
+                <div class="relative w-32 h-32 mx-auto mb-8">
+                    <div class="absolute inset-0 rounded-full bg-gray-700"></div>
+                    <div class="absolute inset-0 rounded-full bg-green-500 transform -rotate-90" style="clip-path: polygon(50% 50%, 100% 0, 100% 100%); transform: rotate({{.Score}}deg);"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-4xl font-bold">{{.Score}}%</span>
+                    </div>
+                </div>
+                <p class="text-2xl font-semibold text-green-400 mb-6 animate-fade-in-delay">{{.Message}}</p>
+            </div>
+
+            <div class="bg-gray-800 rounded-2xl p-8 shadow-xl animate-fade-in-delay-2">
+                <h2 class="text-2xl font-bold mb-6">Detailed Feedback</h2>
+                <div class="space-y-4">
+                    {{range $index, $feedback := .Feedback}}
+                        {{if hasPrefix $feedback "Correct:"}}
+                        <div class="flex items-start space-x-4 p-4 rounded-xl transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-fade-in bg-green-900/50 hover:shadow-green-500/20" style="animation-delay: {{$index}}00ms">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-green-500">
+                                ✓
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-gray-300">{{$feedback}}</p>
+                            </div>
+                        </div>
+                        {{else}}
+                        <div class="flex items-start space-x-4 p-4 rounded-xl transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-fade-in bg-red-900/50 hover:shadow-red-500/20" style="animation-delay: {{$index}}00ms">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-red-500">
+                                ✗
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-gray-300">{{$feedback}}</p>
+                                <p class="text-sm text-red-400 mt-1">Learn from this mistake and try again!</p>
+                            </div>
+                        </div>
+                        {{end}}
+                    {{end}}
+                </div>
+            </div>
+
+            <div class="text-center mt-12 space-y-4">
+                <a href="/quiz" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20 text-lg animate-fade-in-delay-2">
+                    Try Again
+                </a>
+                <br>
+                <a href="/" class="inline-block text-gray-400 hover:text-white transition-colors duration-300 animate-fade-in-delay-2">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Add animation to sections as they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html> 
