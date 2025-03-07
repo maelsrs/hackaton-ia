@@ -90,6 +90,14 @@
                 </div>
                 <button id="restart-btn" class="cta-button">Réessayer</button>
                 <a href="/" class="secondary-button">Retour à l'accueil</a>
+                
+                <!-- Nouvelle section pour le récapitulatif des réponses -->
+                <div class="answers-summary" id="answers-summary">
+                    <h3>Récapitulatif des réponses</h3>
+                    <div class="summary-container" id="summary-container">
+                        <!-- Le récapitulatif sera généré dynamiquement par JavaScript -->
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -109,7 +117,7 @@
     </footer>
 
     <script>
-        // Utiliser les données JSON préparées par le serveur
+        // Données des questions
         const quizData = {
             questions: {{ .QuestionsJSON }}
         };
