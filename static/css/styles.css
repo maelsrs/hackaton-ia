@@ -648,15 +648,25 @@ footer {
     gap: 1rem;
 }
 
+/* Correction des styles pour les options du quiz */
 .option {
     margin: 0;
     padding: 0;
+    position: relative;
+    margin-bottom: var(--spacing-md);
+}
+
+.option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .option label {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 50px;
     background: var(--color-surface);
     border: 2px solid var(--color-text-secondary);
     border-radius: 8px;
@@ -665,24 +675,39 @@ footer {
     margin: 0;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    min-height: 60px;
 }
 
-.option input[type="radio"] {
-    margin-right: 1rem;
+.option label:before {
+    content: '';
     width: 20px;
     height: 20px;
+    border: 2px solid var(--color-text-secondary);
+    border-radius: 50%;
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.option input[type="radio"]:checked + label {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #000;
+}
+
+.option input[type="radio"]:checked + label:before {
+    border-color: #000;
+    background-color: #000;
+    box-shadow: inset 0 0 0 4px var(--color-primary);
 }
 
 .option label:hover {
     border-color: var(--color-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
-}
-
-.option input[type="radio"]:checked + label {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-text);
 }
 
 .quiz-navigation {
@@ -711,71 +736,13 @@ footer {
 .nav-btn:hover:not(:disabled) {
     background-color: var(--color-primary);
     color: #000;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 .nav-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-}
-
-.result-card {
-    background: var(--color-surface);
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-md);
-}
-
-.score-circle {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 1.5rem;
-}
-
-.score-text {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--color-primary);
-    margin: 1rem 0;
-}
-
-.score-message {
-    font-size: 1.25rem;
-    margin: 1rem 0;
-    color: var(--color-text);
-}
-
-.results {
-    text-align: center;
-    padding: 2rem;
-}
-
-.results h2 {
-    margin-bottom: var(--spacing-lg);
-    font-size: 2.2rem;
-    text-align: center;
-}
-
-.results .buttons-container {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
-    margin-top: var(--spacing-lg);
-}
-
-.results .cta-button, 
-.results .secondary-button {
-    margin: 0;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    font-size: 1.1rem;
-    min-width: 180px;
-    text-align: center;
-    opacity: 0;
-    animation: slideInUp 0.5s 1.4s ease forwards;
-}
-
-.results .secondary-button {
-    animation-delay: 1.6s;
 }
 
 /* --- FLOATING QUIZ BUTTON --- */
@@ -785,39 +752,75 @@ footer {
     right: 30px;
     background-color: var(--color-primary);
     color: #000;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
+    padding: 15px 20px;
+    border-radius: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
     font-weight: 600;
-    font-size: 0.8rem;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: right bottom;
+    overflow: hidden;
+    width: auto;
+    white-space: nowrap;
 }
 
 .floating-quiz-button svg {
-    margin-bottom: 4px;
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Animation de lueur pour le bouton complètement agrandi */
+.floating-quiz-button.glow-animation {
+    animation: softGlow 6s infinite;
+}
+
+@keyframes softGlow {
+    0% {
+        background-color: var(--color-primary);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    }
+    25% {
+        background-color: var(--color-primary-dark);
+        box-shadow: 0 -4px 22px rgba(0, 0, 0, 0.22);
+    }
+    50% {
+        background-color: var(--color-primary);
+        box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.25);
+    }
+    75% {
+        background-color: var(--color-primary-dark);
+        box-shadow: 0 -4px 22px rgba(0, 0, 0, 0.22);
+    }
+    100% {
+        background-color: var(--color-primary);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* État de survol */
 .floating-quiz-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    background-color: var(--color-primary-dark);
-    color: #000;
+    box-shadow: var(--shadow-lg);
 }
 
+.floating-quiz-button.glow-animation:hover {
+    transform: none;
+    filter: brightness(1.1);
+}
+
+/* Adaptation mobile */
 @media (max-width: 768px) {
     .floating-quiz-button {
         bottom: 20px;
         right: 20px;
-        width: 56px;
-        height: 56px;
+        padding: 12px 16px;
     }
 }
 

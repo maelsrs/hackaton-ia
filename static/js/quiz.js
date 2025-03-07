@@ -331,5 +331,19 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Une erreur est survenue lors du rechargement du quiz');
         }
     }
+
+    // Gestion du bouton flottant du quiz
+    const quizButton = document.querySelector('.floating-quiz-button');
+    if (quizButton) {
+        window.addEventListener('scroll', function() {
+            const bottomThreshold = document.documentElement.scrollHeight - window.innerHeight - 100;
+            
+            if (window.scrollY > bottomThreshold) {
+                quizButton.classList.add('enlarged');
+            } else {
+                quizButton.classList.remove('enlarged');
+            }
+        });
+    }
 });
  
